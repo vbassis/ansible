@@ -1,0 +1,12 @@
+---
+  - name: Cria usuario
+    user:
+      name: '{{ item }}'
+      shell: /bin/bash
+      groups: '{{ grupo }}'
+      append: yes
+      password: '{{ senha }}'
+      state: present
+    with_items: '{{ user }}'    
+ 
+# tasks file for usuario
