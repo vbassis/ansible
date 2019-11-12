@@ -1,0 +1,9 @@
+---
+  - name: Registra com autosubscribe.
+    redhat_subscription:
+      state: present
+      username: usuario
+      password: senha
+      auto_attach: true
+      force_register: yes
+# tasks file for subscription
