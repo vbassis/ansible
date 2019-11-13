@@ -1,0 +1,14 @@
+---
+user:
+  - mestre03
+
+
+senha: $1$p3qInU3o$Cb/Z1WiisSL2YBRw0a7Oj.
+
+
+grupo:
+
+
+sudo: mestre03 ALL=(ALL) ALL
+  
+# vars file for usuario
