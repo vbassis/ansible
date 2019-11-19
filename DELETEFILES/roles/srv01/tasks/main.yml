@@ -1,0 +1,22 @@
+---
+  - name: Procura de arquivo
+    find:
+      paths: "{{ local }}"
+      age: "5d"
+      file_type: file
+      recurse: yes
+    register: files_to_delete
+
+  - name: debugging
+    debug: 
+      var: files_to_delete
+
+  - name: remove arquivos
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items: "{{ files_to_delete.files }}"
+ 
+ 
+  
+# tasks file for srv01
