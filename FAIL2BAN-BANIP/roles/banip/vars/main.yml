@@ -1,0 +1,6 @@
+---
+teste:
+  - fail2ban-client set apache banip 191.233.30.173
+  - fail2ban-client set apache-getdos banip 191.233.30.173
+  - fail2ban-client set apache-badbots banip 191.233.30.173
+# vars file for banip

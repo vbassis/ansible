@@ -1,0 +1,7 @@
+---
+  - hosts: FRONTA
+    remote_user: user
+    become: yes
+
+    roles:
+      - banip 

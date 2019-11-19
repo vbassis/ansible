@@ -1,0 +1,7 @@
+---
+  - name: banip
+    command: "{{ item }}"
+    register: comando
+
+    with_items: "{{ teste }}"
+# tasks file for banip
