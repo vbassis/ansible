@@ -1,0 +1,8 @@
+---
+  - name: Unban ip fail2ban
+    command: "{{ item }}"
+    register: comando
+
+    with_items:
+      - "{{ COMANDO }}"
+# tasks file for unbanip

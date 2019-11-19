@@ -1,0 +1,10 @@
+---
+  - name: Ban ip fail2ban
+    command: fail2ban-client set '{{ item.name }}' banip '{{ ip.name2 }}'
+    register: comando
+  - debug:
+      var: comando.stdout  
+
+    with_items:
+      - { name: '{{ JAIL }}', name2: '{{ IPS }}' }
+# tasks file for banip

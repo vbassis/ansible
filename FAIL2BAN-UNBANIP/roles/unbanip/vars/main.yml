@@ -1,0 +1,7 @@
+---
+COMANDO:
+  - fail2ban-client set apache unbanip 172.17.3.231
+  - fail2ban-client set apache-getdos unbanip 172.17.3.231
+  - fail2ban-client set apache-badbots unbanip 172.17.3.231
+
+# vars file for unbanip
