@@ -1,0 +1,30 @@
+---
+  - name: Cria usuario
+    user:
+      name: '{{ item }}'
+      shell: /sbin/nologin
+
+      append: yes
+      password: '{{ senha }}'
+      state: present
+    with_items: '{{ user }}'
+
+  - name: Copia Template
+    template:
+      src: template.j2
+      dest: /etc/vsftpd/users
+      owner: root
+      group: root
+      mode: '0644'
+
+  - name: rename template
+    shell: mv /etc/vsftpd/users/template.j2 /etc/vsftpd/users/{{ item }}
+    with_items: '{{ user }}'
+
+  - name: inserir usuario no final do arquivo
+    lineinfile: 
+      path: /etc/vsftpd/ftpusers
+      line: {{ user }}
+    notify: restart ftp
+
+# tasks file for ftp

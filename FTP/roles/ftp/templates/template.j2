@@ -1,0 +1,16 @@
+guest_username={{ user }}
+dirlist_enable=YES
+download_enable=YES
+local_root={{ caminho }}
+cmds_allowed=USER,PASS,SYST,FEAT,OPTS,PWD,TYPE,PASV,LIST,STOR,CWD,MKD,SIZE,MDTM,CDUP,RETR,RNFR,RNTO,DELE,RMD
+local_umask=022
+write_enable=YES
+chown_uploads=YES
+chown_username={{ user }}
+async_abor_enable=YES
+guest_enable=YES
+guest_username={{ user }}
+nopriv_user={{ user }}
+pasv_min_port=12000
+pasv_max_port=12003
+virtual_use_local_privs=YES

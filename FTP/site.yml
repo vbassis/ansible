@@ -1,0 +1,8 @@
+---
+  - hosts: FTP
+    remote_user: user
+    become: yes
+
+    roles:
+      - ftp
+
